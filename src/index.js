@@ -4,7 +4,7 @@ function loadPage() {
 
   const page = document.location.hash.substr(1) || 'home'
 
-  System.import(`./pages/${page}`)
+  import(`./pages/${page}`)
   .then(page => {
     document.getElementById('application').innerHTML = page.render()
   })
